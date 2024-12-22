@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="css/add_book.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/add_book.js"></script>
+    <style>
+        body {
+            background: #D0CFCE;
+            font-family: Arial, sans-serif;
+        }
+        .BUTTON {
+            font-size: 15px;
+            color: black;
+            padding: 15px;
+            background-color: #4CAF50;
+            border: none;
+            cursor: pointer;
+        }
+        h1 {
+            text-align: center;
+        }
+        #book-form {
+            display: grid;
+            padding: 1em;
+            background: #f9f9f9;
+            border: none;
+            margin: 2rem auto;
+            max-width: 600px;
+            box-shadow: -1px 1px 35px 7px rgba(94,94,94,0.4);
+        }
+        label {
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+        input, textarea {
+            padding: 0.7em;
+            margin-bottom: 1rem;
+            border: 1px solid #9c9c9c;
+        }
+        button {
+            background: lightgrey;
+            padding: 0.7em;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- logout button -->
+    <div>
+        <button class="BUTTON" id="log_button" onclick="location.href='admin_portal.html'">Back</button>
+    </div>
+
+    <h1 id="title">Add Book</h1>
+
+    <form id="book-form" action="addBook" method="post" enctype="multipart/form-data">
+        <p>Fill the details of book</p>
+
+        <label for="book_code">Book Code</label>
+        <input id="book_code" name="book_code" type="number" placeholder="Enter Book Code" required><br>
+
+        <label for="book_name">Book Name</label>
+        <input id="book_name" name="book_name" type="text" placeholder="Enter book name" required><br>
+
+        <label for="author1">Author Name(1)</label>
+        <input id="author1" name="author1" type="text" placeholder="Enter Author name" required><br>
+
+        <label for="author2">Author Name(2)</label>
+        <input id="author2" name="author2" type="text" placeholder="Enter Author name"><br>
+
+        <label for="subject">Subject</label>
+        <input id="Subject" name="subject" type="text" placeholder="Enter Subject" required><br>
+
+        <label for="tags">Tags</label>
+        <textarea id="tags" name="tags" placeholder="Add some tags..."></textarea><br>
+
+        <button id="submit" type="submit">Finish</button>
+    </form>
+</body>
+</html>
